@@ -1,5 +1,4 @@
 # resource random_pet is from terrafor provider registry
-# https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet
 # used fo uniqueness, consistency, readability, parameterization, avoiding name conflicts
 resource "random_pet" "prefix" {
   length = 1
