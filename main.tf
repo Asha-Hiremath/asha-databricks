@@ -7,7 +7,7 @@ resource "random_pet" "prefix" {
 # Step 1: Azure Environment Setup
 resource "azurerm_resource_group" "rg" {
   name     = "${random_pet.prefix.id}-rg-data-pipeline"
-  location = "uksouth"
+  location = "australiasouth"
 }
 
 data "azurerm_client_config" "current" {}
