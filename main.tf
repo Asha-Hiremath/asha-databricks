@@ -35,7 +35,7 @@ resource "azurerm_storage_account" "adls" {
 resource "azurerm_storage_container" "containers" {
   for_each              = toset(["bronze", "silver", "gold"])
   name                  = "${random_pet.prefix.id}-${each.value}"
-  storage_account_id    = azurerm_storage_account.adls.id
+  storage_account_name = azurerm_storage_account.adls.name
   container_access_type = "private"
 }
 
